@@ -1,13 +1,15 @@
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const name = '[YOUR NAME GOES HERE]';
+const name = 'Vanessa';
 
 function Profile(name){
   //  if(){
     return <main id="content" role="main" class="base">
             <h1>{name}'s React Page</h1>
-              <p>Example of react JSX in action</p>
+              <p>I'm 20 years old!</p>
             </main>
   //  }
   //  else {
