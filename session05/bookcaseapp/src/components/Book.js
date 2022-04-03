@@ -1,5 +1,4 @@
 import React from 'react';
-import Book from '/Components/Book';
 
 function Book(props) {
   return (
