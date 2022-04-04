@@ -8,8 +8,11 @@ const NewReads=()=>{
         <>
         <div className="newReads">
             <img src="./src/black-love-prints.png" 
-            alt="newreadsicon"/>
+           alt="newreadsicon"/> 
+           <div className="bottom">
             <h3 className="Title">New Reads</h3>
+             <p className="description"></p>
+            </div>
         </div>
         </>
     )
