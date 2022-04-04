@@ -1,17 +1,21 @@
 import React, { Fragment, useState } from "react";
 import ReactDOM from "react-dom";
 import ".src/main.css";
+import NewBooks from "../Pages/NewBooks";
 
 const App = () => {
   const [bookData, setBookdata] = useState([
     { BookName: "my book", bookHref: "https://" },
   ]);
-  const [newBook, setNewBook] = useState({ bookName: '', bookHref: ''});
+  const [newBook, setNewBook] = useState({ bookName: "", bookHref: "" });
 
+  const createBookShelf = (bookcase) => {
+    let oldArray = bookData;
+    let newArray = [...oldArray, bookcase];
 
-  const linkImageStyle = {
-    backgrundImage: "url(/src/bk.png)",
+    setNewBook(newArray, { bookHref: "", bookName: "" }); // not sure what this does
   };
+
   return (
     <Fragment>
       <nav className="navigation">
@@ -31,7 +35,7 @@ const App = () => {
         <main>
           <div className="leftContent">
             <img src="./src/bk.png" />
-            <form onSubmit={e => e.preventDefault()}>
+            <form onSubmit={(e) => e.preventDefault()}>
               <h2 className="formTitle">Add to Bookcase</h2>
               <div>
                 <label for="linkTitle" className="FormLabel">
@@ -39,7 +43,9 @@ const App = () => {
                 </label>
                 <input
                   value={newBook.bookHref}
-                  onChange={e => setNewBook({...newBook, bookHref: e.currentTarget.value})}
+                  onChange={(e) =>
+                    setNewBook({ ...newBook, bookHref: e.currentTarget.value })
+                  }
                   type="text"
                   name="linkTitle"
                   minLength="1"
@@ -60,18 +66,21 @@ const App = () => {
                   placeholder="https://example.com/"
                 />
               </div>
-              <button>Add</button>
+              <button onClick={() => createBookShelf(newBook)}>
+                Add to Bookcase
+              </button>
             </form>
-          </div>
+            <NewBooks/>
+          {/* </div>
           <div className="rightContent">
             <div className="linkCard"></div>
             <div className="linkCardImage" style={linkImageStyle}></div>
             <div className="linkCardLink">
               <h2>
                 <a href="#">My Books!</a>
-              </h2>
-            </div>
-          </div>
+              </h2> */}
+            {/* /* </div> */}
+          </div> */
         </main>
       </nav>
     </Fragment>
