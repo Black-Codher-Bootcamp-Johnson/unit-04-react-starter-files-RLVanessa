@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import ReactDOM from "react-dom";
 import ".src/main.css";
-import NewBooks from "../Pages/NewBooks";
+import NewBooks from "../Pages/NewReads";
 
 const App = () => {
   const [bookData, setBookdata] = useState([
