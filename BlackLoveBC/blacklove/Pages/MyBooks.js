@@ -35,7 +35,7 @@ const App = () => {
         </ul>
         <main>
           <div className="leftContent">
-            <img src="./src/bk.png" />
+            <img src="./src/br.png" />
             <form onSubmit={(e) => e.preventDefault()}>
               <h2 className="formTitle">Add to Bookcase</h2>
               <div>
