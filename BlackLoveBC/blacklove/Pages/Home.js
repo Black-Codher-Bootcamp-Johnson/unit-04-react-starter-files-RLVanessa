@@ -1,7 +1,9 @@
 import react from 'react';
 import './Pages/Home.css';
+
 const Home = () => {
   const [search, setSearch] = useState("");
+  const { keyword, setKeyword, handleSubmit } = props;
   const [bookData, setData] = useState([]);
   const searchBook = (evt) => {
     if (evt.key === "Enter") {
