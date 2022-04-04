@@ -28,7 +28,7 @@ const Home = () => {
           <div className="search">
             <input type="text" placeholder="Enter the name of your book" />
             value={search} onChange={(e) => setSearch(e.target.value)}
-            onKeyPress={searchBook}/>
+            onKeyPress={searchBook}
             <button>
               <i class="fas fa-search"></i>
             </button>
