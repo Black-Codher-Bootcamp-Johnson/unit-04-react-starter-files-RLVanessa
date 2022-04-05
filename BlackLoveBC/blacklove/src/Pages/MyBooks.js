@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import ".src/main.css";
-import BestBooks from "../Pages/BestBooks";
+import BestBooks from "./BestBooks";
 import { application } from "express";
 
 const App = () => {

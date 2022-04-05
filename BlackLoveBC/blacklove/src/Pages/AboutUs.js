@@ -1,4 +1,4 @@
-import AboutUs from "./Pages/About";
+import React from "react";
 
 function AboutUs() {
   return (
