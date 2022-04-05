@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import ".src/main.css";
+import "./MyBooks.css";
 import BestBooks from "./BestBooks";
 import { application } from "express";
 
@@ -39,9 +39,7 @@ const App = () => {
             <form onSubmit={(e) => e.preventDefault()}>
               <h2 className="formTitle">Add to Bookcase</h2>
               <div>
-                <label 
-                htmlFor="linkTitle"
-                className="FormLabel">
+                <label htmlFor="linkTitle" className="FormLabel">
                   Enter a Your bookname
                 </label>
                 <input
@@ -57,9 +55,7 @@ const App = () => {
                 />
               </div>
               <div>
-                <label 
-                htmlFor="linkHref"
-                className="FormLabel">
+                <label htmlFor="linkHref" className="FormLabel">
                   Enter a Your bookname
                 </label>
                 <input
@@ -68,14 +64,15 @@ const App = () => {
                   type="text"
                   name="linkhref"
                   minLength="7"
-                  placeholder="https://example.com/"/>
+                  placeholder="https://example.com/"
+                />
               </div>
               <button onClick={() => createBookShelf(bestBook)}>
                 Add to Bookcase
               </button>
             </form>
-            <BestBooks book={bookData}/>
-          {/* </div>
+            <BestBooks book={bookData} />
+            {/* </div>
           <div className="rightContent">
             <div className="linkCard"></div>
             <div className="linkCardImage" style={linkImageStyle}></div>
@@ -84,7 +81,8 @@ const App = () => {
                 <a href="#">My Books!</a>
               </h2> */}
             {/* /* </div> */}
-          </div> */
+          </div>{" "}
+          */
         </main>
       </nav>
     </Fragment>
